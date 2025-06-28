@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM Manipulation</title>
 </head>
+
 <body>
-    
+    <h1 id="main-heading">Original Heading!</h1>
+    <p>This is first Para.</p>
+    <p>This is second Para.</p>
+    <p>This is third Para.</p>
+
+    <div class="container">
+        <p>This is a div container.</p>
+    </div>
 </body>
+<script>
+    let heading = document.getElementById("main-heading");
+    heading.textContent = "Welcomme to DOM World!";
+
+    let para = document.getElementsByTagName("p");
+    for (let i = 0; i < para.length; i++) {
+    para[i].style.color = "blue";
+    }
+
+    let cont = document.querySelector(".container");
+    cont.style.backgroundColor = "yellow";
+</script>
+
 </html>
