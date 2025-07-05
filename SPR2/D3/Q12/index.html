@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Basic DOM Manipulation</title>
 </head>
 <body>
-    
+    <ul id="list-item">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button id="add-item">Add Item</button>
 </body>
+<script>
+    let newUL = document.querySelector("#list-item");
+    let button = document.getElementById("add-item");
+
+    button.addEventListener("click", () => {
+        const newItem = document.createElement("li");
+        newItem.textContent = "New Item";
+    })
+</script>
 </html>
