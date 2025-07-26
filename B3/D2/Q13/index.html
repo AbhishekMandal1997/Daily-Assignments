@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sticky Header & Fixed Footer - Glass Style</title>
+  <style>
+    /* Base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      min-height: 100vh;
+      color: #333;
+      padding: 0 20px;
+    }
+
+    /* Glassy header */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #1a73e8;
+      border-bottom: 1px solid #ddd;
+      z-index: 10;
+    }
+
+    /* Glassy footer */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.95rem;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.15);
+    }
+
+    /* Main content */
+    main {
+      max-width: 800px;
+      margin: 40px auto 100px auto; /* bottom spacing to avoid overlap */
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    main p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Sticky Example
+  </header>
+
+  <main>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit, arcu sed porttitor convallis, magna libero dictum neque, a porta lacus eros nec nisi.</p>
+    <p>Aliquam erat volutpat. Morbi a felis vitae nisl tincidunt fermentum. Mauris ac leo ac elit vestibulum bibendum.</p>
+    <p>Vivamus feugiat turpis sed dui laoreet convallis. Duis ut felis nec enim finibus posuere.</p>
+    <p>Suspendisse potenti. Vestibulum eu arcu eget purus cursus ullamcorper at et orci.</p>
+    <p>Integer suscipit, est et aliquam facilisis, leo arcu sollicitudin est, ut euismod enim ligula ut metus.</p>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+    <p>Curabitur dignissim justo nec nisi lacinia, at dignissim metus convallis. Nam nec leo nec nisl tincidunt viverra.</p>
+    <p>Donec ac lorem nec sapien tristique tristique sed non ligula.</p>
+    <p>Mauris non sem non nisi consequat scelerisque.</p>
+    <p>Ut vulputate augue nec lectus faucibus fermentum.</p>
+    <p>Curabitur dignissim justo nec nisi lacinia, at dignissim metus convallis. Nam nec leo nec nisl tincidunt viverra.</p>
+    <p>Donec ac lorem nec sapien tristique tristique sed non ligula.</p>
+    <p>Mauris non sem non nisi consequat scelerisque.</p>
+    <p>Ut vulputate augue nec lectus faucibus fermentum.</p>
+  </main>
+
+  <footer>
+    Footer
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Display Properties Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>CSS Display Property Examples</h1>
+  <p class="description">Below are styled examples of elements using <code>block</code>, <code>inline</code>, <code>inline-block</code>, and <code>none</code> display values.</p>
+
+  <div class="container">
+
+    <div class="display-box">
+      <h3>Display: block</h3>
+      <p>A block element takes up the full width and starts on a new line.</p>
+      <div class="block-element">This is a block element</div>
+    </div>
+
+    <div class="display-box">
+      <h3>Display: inline</h3>
+      <p>Inline elements appear in the same line and ignore width/height.</p>
+      <div class="example">
+        This is <span class="inline-element">inline</span> text in a line.
+      </div>
+    </div>
+
+    <div class="display-box">
+      <h3>Display: inline-block</h3>
+      <p>Inline-block allows width/height like block, but sits inline.</p>
+      <div class="example">
+        <div class="inline-block-element">Box A</div>
+        <div class="inline-block-element" style="margin-left: 10px;">Box B</div>
+      </div>
+    </div>
+
+    <div class="display-box">
+      <h3>Display: none</h3>
+      <p>This element is hidden using <code>display: none</code> so it doesn’t appear in the layout.</p>
+      <div class="none-element">You can't see me!</div>
+      <p class="note">(Hidden visually but still in the code.)</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
