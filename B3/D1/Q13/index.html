@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    section {
+      width: 250px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #007BFF;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+  <div class="gallery">
+
+    <section>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/BMW_118d_M_Sportpaket_%28F70%29_%E2%80%93_f_30032025.jpg/1920px-BMW_118d_M_Sportpaket_%28F70%29_%E2%80%93_f_30032025.jpg" alt="A BMW S1 image">
+      <br>
+      <a href="https://en.wikipedia.org/wiki/C-segment" target="_blank">Learn more about BMW Series 1</a>
+    </section>
+
+    <section>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/BMW_F74_M235_DSC_8267.jpg/330px-BMW_F74_M235_DSC_8267.jpg" alt="A BMW S2 image">
+      <br>
+      <a href="https://en.wikipedia.org/wiki/BMW_2_Series_Gran_Coup%C3%A9" target="_blank">Learn more about BMW S2 Coupe</a>
+    </section>
+
+    <section>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/BMW_G20_%282022%29_IMG_7316.jpg/330px-BMW_G20_%282022%29_IMG_7316.jpg" alt="A BMW S3 image">
+      <br>
+      <a href="https://en.wikipedia.org/wiki/BMW_3_Series" target="_blank">Learn more about BMW S3</a>
+    </section>
+
+  </div>
+
+</body>
+</html>

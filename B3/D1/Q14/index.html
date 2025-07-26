@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Error</title>
+</head>
+<body>
+    <form action="/submit">
+  <!-- Replaced Name="username" with for="username" to  associate the label with input -->
+        <label for="username">Enter Username:</label> 
+<!-- Name attribute is missing a closing quote (") is missing in Name attribute. -->
+  <input type="text" id="username" name="username">
+<!-- Typo error in type attribute -->
+  <label for="passcode">Password:</label>
+  <input type="password" id="passcode" name="password">
+<!-- Fixed submit attribute as it was only written submit -->
+  <button type="submit">Submit Form</button>
+</form>
+
+</body>
+</html>
