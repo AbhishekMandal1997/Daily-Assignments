@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Box Model Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>CSS Box Model Demonstration</h1>
+
+  <div class="grid">
+    <div class="box box1">
+      <h2>Box 1 — Content Box</h2>
+      <p>
+        <strong>box-sizing: content-box</strong><br>
+        Padding and border are <em>added</em> to the width.<br>
+        Useful for precision spacing, but can cause layout overflow.
+      </p>
+    </div>
+
+    <div class="box box2">
+      <h2>Box 2 — Border Box</h2>
+      <p>
+        <strong>box-sizing: border-box</strong><br>
+        Padding and border are <em>included</em> in the width.<br>
+        Great for layout consistency and responsive design.
+      </p>
+    </div>
+
+    <div class="box box3">
+      <h2>Box 3 — Custom Layout</h2>
+      <p>
+        Uses <strong>content-box</strong> again with different padding, margin, and border.<br>
+        Highlights how box model properties can be mixed for unique designs.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
