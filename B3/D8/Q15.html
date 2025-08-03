@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+      background: #f5f5f5;
+    }
+
+    input[type="text"] {
+      padding: 0.5em;
+      width: 60%;
+      font-size: 1em;
+    }
+
+    button {
+      padding: 0.5em 1em;
+      font-size: 1em;
+      margin-left: 0.5em;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1em;
+    }
+
+    li {
+      background: #fff;
+      padding: 0.75em;
+      margin-bottom: 0.5em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ddd;
+    }
+
+    .done {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    .btns button {
+      margin-left: 0.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>My Tasks</h2>
+
+  <input type="text" id="taskBox" placeholder="What needs to be done?" />
+  <button id="addBtn">Add Task</button>
+
+  <ul id="list"></ul>
+
+  <script>
+    const taskBox = document.getElementById('taskBox');
+    const addBtn = document.getElementById('addBtn');
+    const list = document.getElementById('list');
+
+    addBtn.addEventListener('click', () => {
+      const text = taskBox.value.trim();
+
+      if (text === '') {
+        alert('Task can’t be empty!');
+        return;
+      }
+
+      const item = document.createElement('li');
+      const task = document.createElement('span');
+      task.textContent = text;
+
+      const doneBtn = document.createElement('button');
+      doneBtn.textContent = 'Complete';
+
+      const delBtn = document.createElement('button');
+      delBtn.textContent = 'Delete';
+
+      const btns = document.createElement('div');
+      btns.className = 'btns';
+      btns.appendChild(doneBtn);
+      btns.appendChild(delBtn);
+
+      item.appendChild(task);
+      item.appendChild(btns);
+      list.appendChild(item);
+
+      taskBox.value = '';
+      taskBox.focus();
+
+      doneBtn.addEventListener('click', () => {
+        task.classList.toggle('done');
+      });
+
+      delBtn.addEventListener('click', () => {
+        list.removeChild(item);
+      });
+    });
+
+    taskBox.addEventListener('keyup', (e) => {
+      if (e.key === 'Enter') {
+        addBtn.click();
+      }
+    });
+  </script>
+
+</body>
+</html>
